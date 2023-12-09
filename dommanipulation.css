@@ -50,6 +50,16 @@ ul {
   text-align: left;
 }
 
-li {
+/* li {
   margin-bottom: 10px;
+} */
+
+.student-item {
+  color: #0000ff;
+  font-weight: bold;
+  color: #ffff;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
 }
