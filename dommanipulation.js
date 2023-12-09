@@ -31,5 +31,10 @@ function filterStudents (name, age) {
            (isNaN(age) || student.age === age); // checks if the age variable is NaN (isNaN(age)) or if the student's age is equal to the provided age value.
   });
 
-
+  // Display the filtered students
+  filteredStudents.forEach(function(student) {  // The forEach method is used on the filteredStudents array to iterate over each student object.
+    const listItem = document.createElement('li');
+    listItem.textContent = `${student.name} (${student.age})`; // sets the textContent property of the listItem to a string that combines the student's name and age. The string is created using template literals (${...})
+    studentInputs.appendChild(listItem);
+  });
 }
