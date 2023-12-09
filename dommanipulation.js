@@ -54,21 +54,21 @@ filterStudents (name, age)
 
     studentInputs.appendChild(listItem)
   })
-}
 
-function getInitials(name) {
+  function getInitials(name) {
   const names = name.trim().split(' ')
   if (names.length === 1) {
     return names[0].charAt(0)
   } else {
     return names[0].charAt(0) + names[names.length - 1].charAt(0)
   }
-}
-function deleteStudent(student) {
-  const index = student.indexOf(student);
+  }
+  function deleteStudent(student) {
+  const index = students.indexOf(student);
   if (index !== -1) {
-    student.splice(index, 1);
-    filterStudents(nameInput.value.trim().toLowerCase().replace(/\s/g, ''), parseInt(ageInput.value.trim(), 10));
+    students.splice(index, 1);
+    filterStudents(inputName.value.trim().toLowerCase().replace(/\s/g, ''), parseInt(inputAge.value.trim(), 10));
+  }
   }
 }
 filterStudents('', NaN);
@@ -80,30 +80,4 @@ filterStudents('', NaN);
 //   });
 //   filterStudents(nameInput.value.trim().toLowerCase().replace(/\s/g, ''), parseInt(ageInput.value.trim(), 10));
 // }
-// filterStudents('', NaN);
-
-
-
-// // Sample data
-// const students = [
-//   { name: 'John Doe', age: 20 },
-//   { name: 'Jane Smith', age: 22 },
-//   { name: 'Michael Johnson', age: 19 },
-//   { name: 'Sarah Davis', age: 21 },
-// ];
-
-// // Initial rendering
-// filterStudents('', NaN);
-
-
-
-
-
-//   // Display the filtered students
-//   filteredStudents.forEach(function(student) {  // The forEach method is used on the filteredStudents array to iterate over each student object.
-//     const listItem = document.createElement('li');
-//     listItem.textContent = `${student.name} (${student.age})`; // sets the textContent property of the listItem to a string that combines the student's name and age. The string is created using template literals (${...})
-//     listItem.classList.add('student-item'); // Add a CSS class to the listItem element
-//     studentInputs.appendChild(listItem);
-//   });
-// }
+// filterStudents('', NaN)
