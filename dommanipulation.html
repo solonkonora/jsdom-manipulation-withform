@@ -8,26 +8,29 @@ The search should be robust to be case insensitive, remove spaces and compare na
 When the delete button is clicked, the user is removed from the list of users*/ -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./dommanipulation.css">
-    <title>student search</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./dommanipulation.css">
+  <title>student search</title>
 </head>
+
 <body>
-    <div class="container">
-        <h2>Student Filter</h2>
-        <form id="filter-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Enter name">
-          <br>
-          <label for="age">Age:</label>
-          <input type="number" id="age" placeholder="Enter age">
-          <br>
-          <button type="submit">Filter</button>
-        </form>
-        <ul id="student-list"></ul>
-      </div>
-      <script src="./dommanipulation.js"></script>
+  <div class="container">
+    <h2>Student Filter</h2>
+    <form id="filter-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter name">
+      <br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" placeholder="Enter age">
+      <br>
+      <button type="submit" id="submit-button">Filter</button>
+    </form>
+    <ul id="student-list"></ul>
+  </div>
+  <script src="./dommanipulation.js"></script>
 </body>
+
 </html>
