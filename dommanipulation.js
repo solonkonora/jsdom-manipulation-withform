@@ -29,23 +29,22 @@ filterStudents (name, age)
     const studentName = student.name.toLowerCase().replace(/\s/g, '')
     return (name === '' || studentName.includes(name)) &&  // checks if the name variable is empty or if the lowercase version of the student's name contains the lowercase version of the provided name value. The includes method is used to perform a case-insensitive search.
            (isNaN(age) || student.age === age) // checks if the age variable is NaN (isNaN(age)) or if the student's age is equal to the provided age value.
-  });
-
+  })
 
   filteredStudents.forEach(function(student) {
     const listItem = document.createElement('li')
     const initials = document.createElement('div')
     const deleteBtn = document.createElement('button')
-
+  
     initials.classList.add('initials')
     initials.textContent = getInitials(student.name)
     listItem.appendChild(initials)
 
     const studentInfo = document.createElement('span')
     studentInfo.textContent = `${student.name} (${student.age})`
-    listItem.appendChild(studentInfo);
+    listItem.appendChild(studentInfo)
 
-    deleteBtn.classList.add('delete-btn');
+    deleteBtn.classList.add('delete-btn')
     deleteBtn.textContent = 'Delete'
     deleteBtn.addEventListener('click', function() {
       deleteStudent(student)
@@ -63,16 +62,32 @@ filterStudents (name, age)
     return names[0].charAt(0) + names[names.length - 1].charAt(0)
   }
   }
-  function deleteStudent(student) {
-  const index = students.indexOf(student);
+
+//   function deleteStudent(student) {
+//   const index = students.indexOf(student)
+//   if (index !== -1) {
+//     students.splice(index, 1)
+//     filterStudents(inputName.value.trim().toLowerCase().replace(/\s/g, ''), parseInt(inputAge.value.trim(), 10))
+//   }
+//   }
+// }
+function deleteStudent(student) {
+  const students = [
+    { name: 'James', age: 20 },
+    { name: 'Mado', age: 22 },
+    { name: 'Leroi', age: 19 },
+    { name: 'Sonny', age: 21 },
+    { name: 'Dan', age: 20 },
+  ]
+
+  const index = students.indexOf(student)
   if (index !== -1) {
-    students.splice(index, 1);
-    filterStudents(inputName.value.trim().toLowerCase().replace(/\s/g, ''), parseInt(inputAge.value.trim(), 10));
-  }
+    students.splice(index, 1)
+    filterStudents(inputName.value.trim(), parseInt(inputAge.value.trim(), 10))
   }
 }
-filterStudents('', NaN);
-
+ }
+filterStudents('', NaN)
 
 // function deleteStudent(student) {
 //   student = student.filter(function(s) {
