@@ -13,9 +13,7 @@ const students = [
 ]
 
 // adding event listener for submission to the form
-stuForms.addEventListener('submit', function(event) {
-
-  // prevents default form settings, ie having to openx in a new tab when submitted
+stuForms.addEventListener('submit', function (event) {
   event.preventDefault()
 
   const name = inputName.value.trim()
