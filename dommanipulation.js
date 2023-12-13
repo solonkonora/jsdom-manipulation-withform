@@ -15,10 +15,8 @@ const students = [
 // adding event listener for submission to the form
 stuForms.addEventListener('submit', function (event) {
   event.preventDefault()
-
   const name = inputName.value.trim()
   const age = parseInt(inputAge.value.trim(10))
-
   filterStudents(name, age)
 })
 
