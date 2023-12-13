@@ -24,7 +24,7 @@ stuForms.addEventListener('submit', function (event) {
   filterStudents(name, age)
 })
 
-function displayStudents(arrUsers) {
+function displayStudents (arrUsers) {
   arrUsers.forEach(function (student) {
     const listItem = document.createElement('li')
     const initials = document.createElement('div')
@@ -49,7 +49,7 @@ function displayStudents(arrUsers) {
   })
 }
 
-function getInitials(name) {
+function getInitials (name) {
   const names = name.trim().split(' ')
   if (names.length === 1) {
     return names[0].charAt(0)
@@ -58,7 +58,7 @@ function getInitials(name) {
   }
 }
 
-function filterStudents(name, age) {
+function filterStudents (name, age) {
   // clear previous student list
   studentInputs.innerHTML = ''
 
@@ -75,7 +75,7 @@ function filterStudents(name, age) {
   displayStudents(filteredStudents)
 }
 
-function deleteStudent(student) {
+function deleteStudent (student) {
   const index = students.findIndex(function (s) {
     return s.name === student.name && s.age === student.age
   })
