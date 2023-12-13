@@ -9,7 +9,7 @@ const students = [
   { name: 'Leroi', age: 19 },
   { name: 'Sonny', age: 21 },
   { name: 'Dan', age: 20 },
-  { name: 'Dan Josh', age: 21 },
+  { name: 'Dan Josh', age: 21 }
 ]
 
 // adding event listener for submission to the form
